@@ -1,3 +1,107 @@
-.fundo{
-    background-color: rgb(158, 125, 84);
+.fundo {
+    background-color: rgb(241, 231, 218);
+}
+
+.page1 {
+    background: rgb(0, 119, 144);
+    background: linear-gradient(90deg, rgba(0, 119, 144, 1) 0%, rgba(0, 0, 0, 1) 100%, rgba(6, 174, 209, 1) 108%);
+    width: 100%;
+    padding-bottom: 7%;
+}
+
+.cabecalho {
+    background-color: rgb(145, 175, 206);
+    padding-bottom: 4%;
+    text-align: right;
+}
+
+.link {
+    float: right;
+    text-decoration: none;
+    margin-top: 1%;
+    margin-right: 2%;
+    color: rgb(18, 25, 66);
+    border-radius: 10%;
+    padding: 0.3%;
+
+}
+
+.link:hover {
+    background-color: rgb(173, 193, 206);
+}
+
+.titulo {
+    color: aliceblue;
+    text-align: right;
+    padding-right: 19%;
+    padding-top: 7%;
+    font-size: 70px;
+}
+
+.baixoTitulo {
+    color: aliceblue;
+    text-align: right;
+    padding-right: 10%;
+    padding-top: 2%;
+    font-size: 30px;
+}
+
+.topico1 {
+    padding-left: 25%;
+    padding-top: 5%;
+   
+
+}
+.topico2 {
+    padding-left: 15%;
+    padding-top: 5%;
+
+}
+.topico3 {
+    padding-left: 15%;
+    padding-top: 5%;
+ 
+}
+
+.circulo {
+    background-color: lightblue;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.icone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    padding-top: 24%;
+}
+.textoTopico1{
+  white-space: "normal";
+  padding-left: 22%;
+  position: absolute;
+
+  
+}
+.textoTopico2{
+    white-space: "normal";
+    padding-bottom: 10px;
+    margin-left: 43%;
+    position: absolute;
+
+  }
+  .textoTopico3{
+    white-space: "normal";
+    padding-bottom: 10px;
+    padding-left: 65%;
+    position: absolute;
+  }
+.topicos{
+    display: flex;
+}
+.textos{
+    display: flex;
+    justify-content: space-between;
+    
 }
