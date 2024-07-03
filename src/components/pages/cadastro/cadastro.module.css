@@ -1,5 +1,5 @@
 .tudo {
-  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 11%, rgba(9,9,121,1) 44%, rgba(5,107,186,1) 73%, rgba(0,212,255,1) 100%);
+  background: #036bda;
 }
 
 .formContainer {
@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 70%;
+  width: 80%;
   padding: 3% 12% 5%;
 }
 
