@@ -1,6 +1,7 @@
+// cadastro.jsx
 import { useState } from 'react';
 import { FaUser, FaLock, FaEnvelope, FaPhone, FaMapMarkerAlt, FaCity, FaMapPin, FaEye, FaEyeSlash } from 'react-icons/fa';
-import './cadastro.css'; // Certifique-se de que o caminho está correto
+import styles from './cadastro.css';
 
 function Cadastro() {
   const [formData, setFormData] = useState({
@@ -44,13 +45,13 @@ function Cadastro() {
   };
 
   return (
-    <div className="form-container">
-      <form className="form" onSubmit={handleSubmit}>
-        <div className='Titulo'>Cadastro</div>
+    <div className={styles.formContainer}>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <div className={styles.titulo}>Cadastro</div>
 
-        <div className="input">
-          <div className="input-with-icon">
-            <FaUser className="icon" />
+        <div className={styles.input}>
+          <div className={styles.inputWithIcon}>
+            <FaUser className={styles.icon} />
             <label htmlFor="nome">Nome:</label>
             <input
               type="text"
@@ -63,9 +64,9 @@ function Cadastro() {
           </div>
         </div>
 
-        <div className="input">
-          <div className="input-with-icon">
-            <FaEnvelope className="icon" />
+        <div className={styles.input}>
+          <div className={styles.inputWithIcon}>
+            <FaEnvelope className={styles.icon} />
             <label htmlFor="email">Email:</label>
             <input
               type="email"
@@ -78,9 +79,9 @@ function Cadastro() {
           </div>
         </div>
 
-        <div className="input">
-          <div className="input-with-icon">
-            <FaLock className="icon" />
+        <div className={styles.input}>
+          <div className={styles.inputWithIcon}>
+            <FaLock className={styles.icon} />
             <label htmlFor="senha">Senha:</label>
             <input
               type={showSenha ? 'text' : 'password'}
@@ -91,7 +92,7 @@ function Cadastro() {
               required
             />
             <div 
-              className="toggle-password" 
+              className={styles.togglePassword} 
               onClick={() => setShowSenha(!showSenha)}
             >
               {showSenha ? <FaEyeSlash /> : <FaEye />}
@@ -99,9 +100,9 @@ function Cadastro() {
           </div>
         </div>
 
-        <div className="input">
-          <div className="input-with-icon">
-            <FaLock className="icon" />
+        <div className={styles.input}>
+          <div className={styles.inputWithIcon}>
+            <FaLock className={styles.icon} />
             <label htmlFor="confirmarSenha">Confirmar Senha:</label>
             <input
               type={showConfirmarSenha ? 'text' : 'password'}
@@ -112,7 +113,7 @@ function Cadastro() {
               required
             />
             <div 
-              className="toggle-password" 
+              className={styles.togglePassword} 
               onClick={() => setShowConfirmarSenha(!showConfirmarSenha)}
             >
               {showConfirmarSenha ? <FaEyeSlash /> : <FaEye />}
@@ -120,9 +121,9 @@ function Cadastro() {
           </div>
         </div>
 
-        <div className="input">
-          <div className="input-with-icon">
-            <FaPhone className="icon" />
+        <div className={styles.input}>
+          <div className={styles.inputWithIcon}>
+            <FaPhone className={styles.icon} />
             <label htmlFor="telefone">Telefone:</label>
             <input
               type="tel"
@@ -135,9 +136,9 @@ function Cadastro() {
           </div>
         </div>
 
-        <div className="input">
-          <div className="input-with-icon">
-            <FaMapMarkerAlt className="icon" />
+        <div className={styles.input}>
+          <div className={styles.inputWithIcon}>
+            <FaMapMarkerAlt className={styles.icon} />
             <label htmlFor="endereco">Endereço:</label>
             <input
               type="text"
@@ -150,9 +151,9 @@ function Cadastro() {
           </div>
         </div>
 
-        <div className="input">
-          <div className="input-with-icon">
-            <FaCity className="icon" />
+        <div className={styles.input}>
+          <div className={styles.inputWithIcon}>
+            <FaCity className={styles.icon} />
             <label htmlFor="cidade">Cidade:</label>
             <input
               type="text"
@@ -165,9 +166,9 @@ function Cadastro() {
           </div>
         </div>
 
-        <div className="input">
-          <div className="input-with-icon">
-            <FaMapPin className="icon" />
+        <div className={styles.input}>
+          <div className={styles.inputWithIcon}>
+            <FaMapPin className={styles.icon} />
             <label htmlFor="estado">Estado:</label>
             <input
               type="text"
@@ -180,9 +181,9 @@ function Cadastro() {
           </div>
         </div>
 
-        <div className="input">
-          <div className="input-with-icon">
-            <FaMapPin className="icon" />
+        <div className={styles.input}>
+          <div className={styles.inputWithIcon}>
+            <FaMapPin className={styles.icon} />
             <label htmlFor="cep">CEP:</label>
             <input
               type="text"
@@ -195,7 +196,7 @@ function Cadastro() {
           </div>
         </div>
 
-        <div className='input'>
+        <div className={styles.input}>
           <button type="submit">Cadastrar</button>
         </div>
       </form>
