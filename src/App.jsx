@@ -1,16 +1,19 @@
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Cadastro from './components/cadastro/cadastro';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Login from './components/login/login';
-import './App.css';
+import Cadastro from './components/cadastro/cadastro';
 
 function App() {
   return (
     <Router>
-      <div className="app-container">
-        <nav className="main-nav">
-          <Link to="/login">Login</Link>
-          <Link to="/cadastro">Cadastro</Link>
+      <div>
+        <nav>
+          <ul>
+            <li><Link to="/login">Login</Link></li>
+            <li><Link to="/cadastro">Cadastro</Link></li>
+          </ul>
         </nav>
+
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/cadastro" element={<Cadastro />} />

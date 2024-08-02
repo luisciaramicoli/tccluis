@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { FaUser, FaLock, FaEnvelope, FaPhone, FaMapMarkerAlt, FaCity, FaMapPin } from 'react-icons/fa';
-import './cadastro.css';
+import { FaUser, FaLock, FaEnvelope, FaPhone, FaMapMarkerAlt, FaCity, FaMapPin, FaEye, FaEyeSlash } from 'react-icons/fa';
+import './cadastro.css'; // Certifique-se de que o caminho está correto
 
 function Cadastro() {
   const [formData, setFormData] = useState({
@@ -14,6 +14,8 @@ function Cadastro() {
     estado: '',
     cep: ''
   });
+  const [showSenha, setShowSenha] = useState(false);
+  const [showConfirmarSenha, setShowConfirmarSenha] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -81,13 +83,19 @@ function Cadastro() {
             <FaLock className="icon" />
             <label htmlFor="senha">Senha:</label>
             <input
-              type="password"
+              type={showSenha ? 'text' : 'password'}
               id="senha"
               name="senha"
               value={formData.senha}
               onChange={handleChange}
               required
             />
+            <div 
+              className="toggle-password" 
+              onClick={() => setShowSenha(!showSenha)}
+            >
+              {showSenha ? <FaEyeSlash /> : <FaEye />}
+            </div>
           </div>
         </div>
 
@@ -96,13 +104,19 @@ function Cadastro() {
             <FaLock className="icon" />
             <label htmlFor="confirmarSenha">Confirmar Senha:</label>
             <input
-              type="password"
+              type={showConfirmarSenha ? 'text' : 'password'}
               id="confirmarSenha"
               name="confirmarSenha"
               value={formData.confirmarSenha}
               onChange={handleChange}
               required
             />
+            <div 
+              className="toggle-password" 
+              onClick={() => setShowConfirmarSenha(!showConfirmarSenha)}
+            >
+              {showConfirmarSenha ? <FaEyeSlash /> : <FaEye />}
+            </div>
           </div>
         </div>
 
