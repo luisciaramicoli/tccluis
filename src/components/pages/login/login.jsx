@@ -35,7 +35,8 @@ function Login() {
   };
 
   return (
-    <div className="form-container">
+    <div className='tudo'>
+    <div className="formContainer">
       <form className="form" onSubmit={handleSubmit}>
         <div className='Titulo'>Login</div>
 
@@ -73,6 +74,7 @@ function Login() {
           <button type="submit">Entrar</button>
         </div>
       </form>
+    </div>
     </div>
   );
 }

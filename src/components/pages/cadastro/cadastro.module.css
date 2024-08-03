@@ -1,49 +1,54 @@
-body, html, #root {
+.tudo{
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 11%, rgba(9,9,121,1) 44%, rgba(5,107,186,1) 73%, rgba(0,212,255,1) 100%);
+}
+  .formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  body {
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 11%, rgba(9,9,121,1) 44%, rgba(5,107,186,1) 73%, rgba(0,212,255,1) 100%);
-  }
-  
-  .form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
+    width: 70%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+    padding-left: 12%;
   }
   
   .form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: 500px; /* Ajuste a largura conforme necessário */
+    width: 50%; /* Ajuste a largura conforme necessário */
     padding: 2rem; /* Ajuste o padding conforme necessário */
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: rgba(225, 225, 225, 0.2);
     backdrop-filter: blur(10px);
+
+    
   }
   
   .input {
     display: flex;
     flex-direction: column;
     border-radius: 4px;
-    margin-left: 5%;
+    margin-left: 2%;
+    margin-right: 8%;
   }
   
-  .input-with-icon {
+  .inputWithIcon {
     position: relative;
   }
   
-  .input-with-icon .icon {
+  .inputWithIcon .icon {
+    position: absolute;
+    top: 70%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #ccc;
+  }
+  .inputWithIcon .togglePassword {
+   padding-left: 100%;
     position: absolute;
     top: 70%;
     left: 10px;
@@ -51,7 +56,7 @@ body, html, #root {
     color: #ccc;
   }
   
-  .input-with-icon input {
+  .inputWithIcon input {
     width: 100%;
     padding: 10px 10px 10px 40px; /* Espaço para o ícone */
     background-color: transparent;
@@ -62,7 +67,7 @@ body, html, #root {
     color: aliceblue;
   }
   
-  .Titulo {
+  .titulo {
     text-align: center;
     color: aliceblue;
     font-size: 150%;
@@ -78,9 +83,12 @@ body, html, #root {
     margin-top: 10px;
     background-color: rgb(255, 255, 255);
     cursor: pointer;
+    margin-left: 5%;
   }
   
   .input button:hover {
     background-color: rgb(8, 104, 189);
   }
-  
+  .togglePassword{
+   text-align: right;
+  }

@@ -20,3 +20,10 @@
 .logo.react {
   margin-left: 1rem;
 }
+body, html{
+  height: 100%;
+  width: 100%;
+  
+
+}
+

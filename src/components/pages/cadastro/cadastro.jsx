@@ -1,7 +1,7 @@
 // cadastro.jsx
 import { useState } from 'react';
 import { FaUser, FaLock, FaEnvelope, FaPhone, FaMapMarkerAlt, FaCity, FaMapPin, FaEye, FaEyeSlash } from 'react-icons/fa';
-import styles from './cadastro.css';
+import styles from './cadastro.module.css';
 
 function Cadastro() {
   const [formData, setFormData] = useState({
@@ -45,6 +45,7 @@ function Cadastro() {
   };
 
   return (
+    <div className='tudo'>
     <div className={styles.formContainer}>
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.titulo}>Cadastro</div>
@@ -200,7 +201,8 @@ function Cadastro() {
           <button type="submit">Cadastrar</button>
         </div>
       </form>
-    </div>
+    </div> 
+</div>
   );
 }
 
