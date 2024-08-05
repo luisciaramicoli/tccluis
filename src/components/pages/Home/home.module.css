@@ -1,29 +1,34 @@
 .fundo {
-    background-color: rgb(241, 231, 218);
+    background-color: rgb(227, 235, 240);
+    padding-bottom: 10%;
+    min-height: 100vh; /* Garante que ocupe toda a altura da tela */
+    display: flex;
+    flex-direction: column;
 }
 
 .page1 {
     background: rgb(0, 119, 144);
     background: linear-gradient(90deg, rgba(0, 119, 144, 1) 0%, rgba(0, 0, 0, 1) 100%, rgba(6, 174, 209, 1) 108%);
     width: 100%;
-    padding-bottom: 7%;
+    padding-bottom: 5%;
 }
 
 .cabecalho {
     background-color: rgb(145, 175, 206);
-    padding-bottom: 4%;
+    padding: 1rem;
     text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha, se necessário */
 }
 
 .link {
-    float: right;
     text-decoration: none;
-    margin-top: 1%;
-    margin-right: 2%;
     color: rgb(18, 25, 66);
     border-radius: 10%;
-    padding: 0.3%;
-
+    padding: 0.3rem 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .link:hover {
@@ -33,9 +38,9 @@
 .titulo {
     color: aliceblue;
     text-align: right;
-    padding-right: 19%;
+    padding-right: 17%;
     padding-top: 7%;
-    font-size: 70px;
+    font-size: 4.5rem;
 }
 
 .baixoTitulo {
@@ -43,24 +48,21 @@
     text-align: right;
     padding-right: 10%;
     padding-top: 2%;
-    font-size: 30px;
+    font-size: 2rem;
 }
 
-.topico1 {
-    padding-left: 25%;
-    padding-top: 5%;
-   
-
+.topicos {
+    display: flex;
+    justify-content: center;
+    gap: 8rem; /* Aumenta a distância entre os tópicos */
+    padding: 6rem 0;
+    flex-wrap: wrap;
 }
-.topico2 {
-    padding-left: 15%;
-    padding-top: 5%;
 
-}
-.topico3 {
-    padding-left: 15%;
-    padding-top: 5%;
- 
+.topico1, .topico2, .topico3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .circulo {
@@ -68,40 +70,65 @@
     border-radius: 50%;
     width: 100px;
     height: 100px;
-}
-
-.icone {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1rem;
+}
+
+.icone {
     font-size: 50px;
-    padding-top: 24%;
 }
-.textoTopico1{
-  white-space: "normal";
-  padding-left: 22%;
-  position: absolute;
 
-  
+.textos {
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 5%;
+    font-size: 1.2rem;
 }
-.textoTopico2{
-    white-space: "normal";
-    padding-bottom: 10px;
-    margin-left: 43%;
-    position: absolute;
 
-  }
-  .textoTopico3{
-    white-space: "normal";
-    padding-bottom: 10px;
-    padding-left: 65%;
-    position: absolute;
-  }
-.topicos{
-    display: flex;
+.textoTopico1, .textoTopico2, .textoTopico3 {
+    text-align: center;
 }
-.textos{
-    display: flex;
-    justify-content: space-between;
-    
+.imagem{
+    float: left;
+    width: 15%;
+    padding-top: 4%;
+    padding-left: 7%;
+}
+.video{
+    text-align: center;
+    width: 30%;
+    padding-top: 4%;
+    padding-left: 35%;
+}
+@media (max-width: 768px) {
+    .titulo {
+        padding-right: 5%;
+        font-size: 2rem;
+    }
+    .baixoTitulo {
+        padding-right: 5%;
+        font-size: 1.2rem;
+    }
+    .cabecalho {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem; /* Ajusta o espaçamento entre os links no modo coluna */
+    }
+    .link {
+        padding: 0.5rem; /* Aumenta o padding dos links para melhorar a usabilidade em dispositivos móveis */
+    }
+    .circulo {
+        width: 50px;
+        height: 50px;
+    }
+    .icone {
+        font-size: 25px;
+    }
+    .topicos {
+        gap: 5rem; /* Aumenta a distância entre os tópicos */
+        padding: 3rem 0;
+    }
 }
