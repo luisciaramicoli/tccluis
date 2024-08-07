@@ -1,34 +1,45 @@
 .fundo {
-    background-color: rgb(227, 235, 240);
+    background-color: white;
     padding-bottom: 10%;
-    min-height: 100vh; /* Garante que ocupe toda a altura da tela */
+    min-height: 100vh;
+    /* Garante que ocupe toda a altura da tela */
     display: flex;
     flex-direction: column;
 }
 
 .page1 {
-    background: rgb(0, 119, 144);
-    background: linear-gradient(90deg, rgba(0, 119, 144, 1) 0%, rgba(0, 0, 0, 1) 100%, rgba(6, 174, 209, 1) 108%);
-    width: 100%;
     padding-bottom: 5%;
+    width: 100%;
+    height: 20%;
+    padding-top: 4%;
 }
 
 .cabecalho {
-    background-color: rgb(145, 175, 206);
+    background-color: #545454;
     padding: 1rem;
     text-align: right;
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
-    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha, se necessário */
+    flex-wrap: wrap;
+    /* Permite que os itens se movam para a próxima linha, se necessário */
+    font-weight: bolder;
+    font-size: 1.1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    /* Garante que o cabeçalho fique acima de outros elementos */
 }
 
 .link {
     text-decoration: none;
-    color: rgb(18, 25, 66);
+    color: rgb(255, 255, 255);
     border-radius: 10%;
-    padding: 0.3rem 1rem;
+    padding: 1%;
     transition: background-color 0.3s ease;
+    font-size: 1.3rem;
 }
 
 .link:hover {
@@ -54,12 +65,15 @@
 .topicos {
     display: flex;
     justify-content: center;
-    gap: 8rem; /* Aumenta a distância entre os tópicos */
+    gap: 8rem;
+    /* Aumenta a distância entre os tópicos */
     padding: 6rem 0;
     flex-wrap: wrap;
 }
 
-.topico1, .topico2, .topico3 {
+.topico1,
+.topico2,
+.topico3 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,8 +82,8 @@
 .circulo {
     background-color: lightblue;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,7 +91,7 @@
 }
 
 .icone {
-    font-size: 50px;
+    font-size: 70px;
 }
 
 .textos {
@@ -85,64 +99,159 @@
     padding-left: 20%;
     padding-right: 20%;
     padding-top: 1%;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    padding-bottom: 8%;
 }
 
-.textoTopico1, .textoTopico2, .textoTopico3 {
+.textoTopico1,
+.textoTopico2,
+.textoTopico3 {
     text-align: center;
 }
-.imagem{
+
+.imagem {
     float: left;
     width: 15%;
     padding-top: 4%;
     padding-left: 7%;
 }
-.video{
+
+.video {
     text-align: center;
     width: 30%;
-    padding-top: 4%;
-    padding-left: 35%;
-    padding-bottom: 2%;
+    float: left;
 }
-.page3{
-    background: rgb(0, 119, 144);
-    background: linear-gradient(90deg, rgba(0, 119, 144, 1) 0%, rgba(0, 0, 0, 1) 100%, rgba(6, 174, 209, 1) 108%);
+
+.page3 {
     width: 100%;
-    padding-bottom: 30%;
-    color: rgb(194, 195, 196);
-      font-size: 1.2rem;
+    color: rgb(224, 217, 217);
+    font-size: 1.2rem;
+    padding-bottom: 5%;
+    background-color: hsl(260, 84%, 51%);
+    align-items: center;
     
 }
-.textPage3{
+
+.textPage3 {
+    padding-left: 50%;
+    font-size: 1.8rem;
+    padding-top: 5%;
+    padding-right: 4%;
+    display: flex;
+}
+
+.pageBanner {
+    width: 100%;
+    height: 10%;
+}
+
+.cadastroFuncionarioImg {
+    width: 550%;
     float: left;
-    padding-right: 50%;
+}
+.cadastroFuncionario {
+    padding-left: 2%;
+    padding-top: 4%;
+    float: left;
+    
+}
+.tituloPage3{
+    text-align: center;
+    font-size: 2.3rem;
+    padding-top: 1%;
+}
+.cadastroPage3{
+    display: flex;
+}
+.page4{
+    text-align: center;
+}
+.tituloPage2{
+    text-align: center;
+    font-size: 2.3rem; 
+}
+.tituloPage4{
+    font-size: 2.3rem;
+    padding-top: 3%;
+    padding-bottom: 2%;   
+}
+.tituloPage5{
+    font-size: 2.3rem;
+    padding-top: 3%;
+    padding-bottom: 2%; 
+    text-align: center;  
+}
+.textoPage4{
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 1%;
+    font-size: 1.7rem;
+    padding-bottom: 8%;
+}
+.page5{
+    background-color: #221f1f;
+    color: rgb(224, 217, 217);
+}
+.telaEmpresa{
+    width: 30%;
+    height: 30%;
+    padding-top: 2%;
+    padding-right: 2%;
+    text-align: right;
+}
+.textpage5{
+    float: left;
+    padding-right: 30%;
+    font-size: 1.8rem;
+    padding-top: 2;
+    padding-left: 4%;
+    text-align: justify;
+    padding-bottom: 4%;
+    
+}
+.paginaPage5{
+    display: flex;
 }
 @media (max-width: 768px) {
     .titulo {
         padding-right: 5%;
         font-size: 2rem;
     }
+
     .baixoTitulo {
         padding-right: 5%;
         font-size: 1.2rem;
     }
+
     .cabecalho {
         flex-direction: row;
         align-items: center;
-        gap: 0.5rem; /* Ajusta o espaçamento entre os links no modo coluna */
+        gap: 0.5rem;
+        /* Ajusta o espaçamento entre os links no modo coluna */
     }
+
     .link {
-        padding: 0.5rem; /* Aumenta o padding dos links para melhorar a usabilidade em dispositivos móveis */
+        padding: 0.5rem;
+        /* Aumenta o padding dos links para melhorar a usabilidade em dispositivos móveis */
     }
+
     .circulo {
         width: 50px;
         height: 50px;
     }
+
     .icone {
         font-size: 25px;
     }
+
     .topicos {
-        gap: 5rem; /* Aumenta a distância entre os tópicos */
+        gap: 5rem;
+        /* Aumenta a distância entre os tópicos */
         padding: 3rem 0;
+    }
+
+    .cadastroFuncionarioImg {
+        width: 100%;
     }
 }
