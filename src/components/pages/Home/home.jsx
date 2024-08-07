@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import styles from './home.module.css';
-import { FaBriefcase } from "react-icons/fa";
+import { FaBriefcase,FaLightbulb,FaCog } from "react-icons/fa";
 
 function Home() {
   return (
@@ -20,7 +20,7 @@ function Home() {
         <div className={styles.topicos}>
           <div className={styles.topico1}>
             <div className={styles.circulo}>
-              <FaBriefcase className={styles.icone} />
+              < FaBriefcase className={styles.icone} />
             </div>
             <div className={styles.textoTopico1}>
               Acessibilidade
@@ -29,7 +29,7 @@ function Home() {
 
           <div className={styles.topico2}>
             <div className={styles.circulo}>
-              <FaBriefcase className={styles.icone} />
+              <FaLightbulb className={styles.icone} />
             </div>
             <div className={styles.textoTopico2}>
               Inovação
@@ -38,7 +38,7 @@ function Home() {
 
           <div className={styles.topico3}>
             <div className={styles.circulo}>
-              <FaBriefcase className={styles.icone} />
+              <FaCog className={styles.icone} />
             </div>
             <div className={styles.textoTopico3}>
               Tecnologia
