@@ -5,8 +5,11 @@ import './login.css';
 function Login() {
   const [formData, setFormData] = useState({
     email: '',
+    cpf: '',
     senha: ''
   });
+
+  const [cpfError, setCpfError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -14,10 +17,23 @@ function Login() {
       ...formData,
       [name]: value
     });
+
+    if (name === 'cpf') {
+      if (validarCPF(value)) {
+        setCpfError('');
+      } else {
+        setCpfError('CPF inválido');
+      }
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!validarCPF(formData.cpf)) {
+      setCpfError('CPF inválido');
+      return;
+    }
+
     // Lógica para envio dos dados de login para a API
     try {
       const response = await fetch('URL_DA_API_LOGIN', {
@@ -52,6 +68,22 @@ function Login() {
               onChange={handleChange}
               required
             />
+          </div>
+        </div>
+
+        <div className="input">
+          <div className="input-with-icon">
+            <FaUser className="icon" />
+            <label htmlFor="cpf">CPF:</label>
+            <input
+              type="text"
+              id="cpf"
+              name="cpf"
+              value={formData.cpf}
+              onChange={handleChange}
+              required
+            />
+            {cpfError && <div className="error">{cpfError}</div>}
           </div>
         </div>
 

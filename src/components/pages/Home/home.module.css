@@ -1,53 +1,79 @@
 .fundo {
-    background-color: white;
+    background-color: #f0f4ff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
-
-.page1, .page2, .page3, .page4, .page5 {
-    width: 100%;
-    min-height: 20vh; /* 100vh dividido por 5 páginas */
-    padding: 2% 0;
-}
-
-.page1 {
-    padding-top: 4%;
+    font-family: 'Poppins', sans-serif;
 }
 
 .cabecalho {
-    background: #4d9ffd;
+    background: #3a82f7;
     padding: 1rem;
     text-align: right;
     display: flex;
-    justify-content: space-between; /* Ajuste para distribuir os itens entre os lados */
-    align-items: center; /* Alinhe verticalmente */
-    flex-wrap: wrap;
-    font-weight: bolder;
-    font-size: 1.1rem;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.2rem;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.page1, .page2, .page3, .page4, .page5 {
+    width: 100%;
+    min-height: 20vh; 
+    padding: 2% 0;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.page1 {
+    padding-top: 6%;
+    background: linear-gradient(180deg, #f0f4ff 0%, #e0e8ff 100%);
+}
+
+.page2 {
+    background: linear-gradient(180deg, #e0e8ff 0%, #d1e1ff 100%);
+}
+
+.page3 {
+    background: linear-gradient(180deg, #d1e1ff 0%, #306dcf 100%);
+    color: #e0d9d9;
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+.page4 {
+    background: linear-gradient(180deg, #306dcf 0%, #1e3c72 100%);
+    color: white;
+}
+
+.page5 {
+    background: linear-gradient(180deg, #1e3c72 0%, #221f1f 100%);
+    color: #e0d9d9;
+    text-align: center;
 }
 
 .logoInicio {
-    width: 4%; /* Ajuste o tamanho da logo conforme necessário */
+    width: 5%;
     margin-left: 1%;
 }
 
 .link {
     text-decoration: none;
-    color: rgb(255, 255, 255);
-    border-radius: 10%;
+    color: white;
+    background-color: #4d9ffd;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
     transition: background-color 0.3s ease;
-    font-size: 1.3rem;
-    margin-right: 1.3rem; /* Adiciona espaço entre os links */
+    font-size: 1.1rem;
+    margin-right: 1.5rem;
 }
-
 .link:first-of-type {
-    margin-left: 0; /* Remove o espaço antes do primeiro link */
+    margin-left: 0; 
 }
 
 .link:hover {
@@ -73,8 +99,8 @@
 .topicos {
     display: flex;
     justify-content: center;
-    gap: 8rem;
-    padding: 6rem 0;
+    gap: 6rem;
+    padding: 4rem 0;
     flex-wrap: wrap;
 }
 
@@ -85,18 +111,20 @@
 }
 
 .circulo {
-    background-color: lightblue;
+    background-color: #f0f4ff;
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .icone {
-    font-size: 70px;
+    font-size: 60px;
+    color: #3a82f7;
 }
 
 .textos {
@@ -106,6 +134,7 @@
     padding-top: 1%;
     font-size: 1.4rem;
     padding-bottom: 8%;
+    transition: color 0.5s ease-in-out;
 }
 
 .textoTopico1, .textoTopico2, .textoTopico3 {
@@ -125,21 +154,16 @@
     float: left;
 }
 
-.page3 {
-    color: rgb(224, 217, 217);
-    font-size: 1.2rem;
-    background-color: hsla(239, 100%, 26%, 0.849);
-    align-items: center;
-}
-
 .textPage3 {
     padding-left: 45%;
     font-size: 1.4rem;
-    padding-top: 4%;
+    padding-top: 8%;
     padding-right: 4%;
     padding-bottom: 1%;
     display: flex;
     text-align: justify;
+    transition: color 0.5s ease-in-out;
+    color: #221f1f;
 }
 
 .pageBanner {
@@ -162,6 +186,7 @@
     text-align: center;
     font-size: 2.3rem;
     padding-top: 1%;
+    color: #221f1f;
 }
 
 .cadastroPage3 {
@@ -179,60 +204,100 @@
     padding-bottom: 2%;
     text-align: center;
 }
+.tituloPage4{
+    padding-top: 7%;
+}
 
 .textoPage4 {
     text-align: center;
     padding-left: 20%;
     padding-right: 20%;
-    padding-top: 1%;
-    font-size: 1.4rem;
-    padding-bottom: 8%;
-    
-}
-
-.page5 {
-    background-color: #221f1f;
-    color: rgb(224, 217, 217);
+    padding-top: 2%;
+    font-size: 1.5rem;
+    padding-bottom: 5%;
+    transition: color 0.5s ease-in-out;
 }
 
 .telaEmpresa {
-    width: 35%;
+    width: 50%;
     height: 30%;
-    padding-top: 0%;
-    padding-right: 4%;
-    text-align: right;
 }
 
 .textpage5 {
-    float: left;
-    padding-right: 20%;
     font-size: 1.4rem;
     padding-top: 1%;
-    padding-left: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 2%;
     text-align: justify;
     padding-bottom: 4%;
+    transition: color 0.5s ease-in-out;
 }
 
-.paginaPage5 {
-    display: flex;
-}
-.rodape{
-    background-color: #bdd4ff;
+.rodape {
+    background: linear-gradient(135deg, #3a82f7, #1e3c72);
+    color: white;
+    padding: 2rem 0;
     text-align: center;
+    position: relative;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
 }
-.criadores{
-text-align: center;
-padding-bottom: 2%;
-font-size: 1.3rem;
-   
+
+.rodape::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(135deg, #1e3c72, transparent);
+    border-radius: 50% 50% 0 0;
 }
-.logo{
-    width: 10%;
+
+.logoDiv {
+    margin-bottom: 1.2rem;
 }
-.logoDiv{
-    text-align: center;
-    padding-top: 2%;
+
+.logo {
+    width: 8%;
+    transition: transform 0.3s ease;
 }
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.redesSociais {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.redesSociais a {
+    margin: 0 10px;
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.redesSociais a:hover {
+    color: #ddd;
+}
+
+.criadores {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.criadores span {
+    font-weight: bold;
+}
+
+.direitosReservados {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    color: #ddd;
+}
+
 @media (max-width: 768px) {
     .titulo {
         padding-right: 5%;

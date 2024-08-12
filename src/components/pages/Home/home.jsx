@@ -81,22 +81,44 @@ function Home() {
       <div className={styles.page5}>
         <div className={styles.tituloPage5}>Pagina inicial</div>
         <div className={styles.paginaPage5}>
+         
+
+          <img src="/tela empresa.png" alt="" className={styles.telaEmpresa} />
           <div className={styles.textpage5}>A dashboard do Site Tecnológico Administrativo (SAT) oferece uma visão clara e intuitiva das operações administrativas.
             Com uma interface personalizável e recursos como gráficos dinâmicos e notificações instantâneas, permite que gestores monitorem métricas em tempo
             real, analisem desempenho e tomem decisões rápidas e precisas, otimizando a gestão de recursos tecnológicos.
           </div>
-
-          <img src="/tela empresa.png" alt="" className={styles.telaEmpresa} />
         </div>
       </div>
       <footer className={styles.rodape}>
-        <div className={styles.logoDiv}>
-          <img src="/Logo_site.png" alt="" className={styles.logo} />
-        </div>
-        <div className={styles.criadores}>
-          Criado por: Reynaldo,Pedro,Vynicius,Luis
-        </div>
-      </footer>
+    <div className={styles.logoDiv}>
+        <img src="/Logo_site.png" alt="Logo" className={styles.logo} />
+    </div>
+    
+    <div className={styles.redesSociais}>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-twitter"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-instagram"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-linkedin-in"></i>
+        </a>
+    </div>
+
+    <div className={styles.criadores}>
+        Criado por: <span>Reynaldo</span>, <span>Pedro</span>, <span>Vynicius</span>, <span>Luis</span>
+    </div>
+
+    <div className={styles.direitosReservados}>
+        © 2024 Todos os direitos reservados.
+    </div>
+</footer>
+
     </div>
   );
 }
