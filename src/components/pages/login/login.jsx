@@ -50,7 +50,7 @@ function Login() {
       <header className="cabecalho">
         <img src="/Logo_site.png" alt="Logo" className="logoInicio" />
         <nav>
-          <Link to="/home" className="link">Home</Link>
+          <Link to="/" className="link">Home</Link>
           <Link to="/contato" className="link">Contato</Link>
         </nav>
       </header>

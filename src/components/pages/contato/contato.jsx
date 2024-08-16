@@ -9,7 +9,7 @@ function Contato() {
       <header className={styles.cabecalho}>
         <img src="/Logo_site.png" alt="Logo" className={styles.logoInicio} />
         <nav>
-          <Link to="/home" className={styles.link}>Home</Link>
+          <Link to="/" className={styles.link}>Home</Link>
           <Link to="/login" className={styles.link}>Login</Link>
         </nav>
       </header>
