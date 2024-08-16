@@ -9,7 +9,7 @@ function Home() {
       <header className={styles.cabecalho}>
         <img src="/Logo_site.png" alt="Logo" className={styles.logoInicio} />
         <nav>
-          <Link to="/cadastro" className={styles.link}>Cadastro</Link>
+        <Link to="/contato" className={styles.link}>Contato</Link>
           <Link to="/login" className={styles.link}>Login</Link>
         </nav>
       </header>

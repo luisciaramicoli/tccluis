@@ -4,34 +4,25 @@ import { FaLock, FaEnvelope } from 'react-icons/fa';
 import './login.css';
 
 function Login() {
-  const [formData, setFormData] = useState({
-    email: '',
-    senha: ''
-  });
+ const [usu_email, setUsu_email] = useState()
+ const [usu_senha, setUsu_senha] = useState()
 
   const [loginError, setLoginError] = useState('');
   const navigate = useNavigate();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3333/usuarios/cli', {
+      const response = await fetch('http://localhost:3333/loginUsuario', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          usu_email: formData.email,
-          usu_senha: formData.senha
+          usu_email,
+          usu_senha
         })
       });
 
@@ -44,7 +35,7 @@ function Login() {
       const result = await response.json();
       console.log('Resposta do servidor:', result);
 
-      if (result.success) {
+      if (result.sucesso) {
         console.log('Login efetuado com sucesso:', result);
         navigate('/cadastro'); // Substitua '/cadastro' pelo caminho desejado
       } else {
@@ -70,8 +61,8 @@ function Login() {
                 type="email"
                 id="email"
                 name="email"
-                value={formData.email}
-                onChange={handleChange}
+                value={usu_email}
+                onChange={(e) => setUsu_email(e.target.value)}
                 required
               />
             </div>
@@ -85,8 +76,8 @@ function Login() {
                 type="password"
                 id="senha"
                 name="senha"
-                value={formData.senha}
-                onChange={handleChange}
+                value={usu_senha}
+                onChange={(e) => setUsu_senha(e.target.value)}
                 required
               />
             </div>
