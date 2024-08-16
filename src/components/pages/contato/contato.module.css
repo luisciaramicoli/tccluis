@@ -13,7 +13,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1.2rem;
   position: fixed;
   top: 0;
@@ -24,13 +24,18 @@
 }
 
 .pageContato {
-  padding: 150px 4%;
+  padding: 200px 5%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  background-color: #3968c0;
   text-align: center;
 }
 
 .tituloContato {
   font-size: 2.5rem;
-  color: #3a82f7;
+  color: #ffffff;
   margin-bottom: 2rem;
   font-weight: 600;
 }
@@ -84,7 +89,7 @@
 .rodape {
   background: linear-gradient(135deg, #3a82f7, #1e3c72);
   color: white;
-  padding: 2rem 0;
+  padding: 1rem 0;
   text-align: center;
   position: relative;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);

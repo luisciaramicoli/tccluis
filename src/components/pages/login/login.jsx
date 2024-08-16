@@ -1,15 +1,13 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { FaLock, FaEnvelope } from 'react-icons/fa';
 import './login.css';
 
 function Login() {
- const [usu_email, setUsu_email] = useState()
- const [usu_senha, setUsu_senha] = useState()
-
+  const [usu_email, setUsu_email] = useState('');
+  const [usu_senha, setUsu_senha] = useState('');
   const [loginError, setLoginError] = useState('');
   const navigate = useNavigate();
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,12 +16,12 @@ function Login() {
       const response = await fetch('http://localhost:3333/loginUsuario', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           usu_email,
-          usu_senha
-        })
+          usu_senha,
+        }),
       });
 
       console.log('Status da resposta:', response.status);
@@ -37,7 +35,7 @@ function Login() {
 
       if (result.sucesso) {
         console.log('Login efetuado com sucesso:', result);
-        navigate('/cadastro'); // Substitua '/cadastro' pelo caminho desejado
+        navigate('/home'); // Substitua '/cadastro' pelo caminho desejado
       } else {
         setLoginError('Usuário não encontrado ou credenciais inválidas');
       }
@@ -48,10 +46,18 @@ function Login() {
   };
 
   return (
-    <div className='tudo'>
+    <div className="tudo">
+      <header className="cabecalho">
+        <img src="/Logo_site.png" alt="Logo" className="logoInicio" />
+        <nav>
+          <Link to="/home" className="link">Home</Link>
+          <Link to="/contato" className="link">Contato</Link>
+        </nav>
+      </header>
+
       <div className="formContainer">
         <form className="form" onSubmit={handleSubmit}>
-          <div className='Titulo'>Login</div>
+          <div className="Titulo">Login</div>
 
           <div className="input">
             <div className="input-with-icon">
@@ -85,7 +91,7 @@ function Login() {
 
           {loginError && <div className="error">{loginError}</div>}
 
-          <div className='input'>
+          <div className="input">
             <button type="submit">Entrar</button>
           </div>
         </form>

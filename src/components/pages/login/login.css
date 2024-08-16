@@ -8,7 +8,43 @@
 .tudo {
   background: #3a82f7;
 }
+.cabecalho {
+  background: #3a82f7;
+  padding: 1rem;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
+.link {
+  text-decoration: none;
+  color: white;
+  background-color: #4d9ffd;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  font-size: 1.1rem;
+  margin-right: 1.5rem;
+}
+.link:first-of-type {
+  margin-left: 0; 
+}
+.logoInicio {
+  width: 5%;
+  margin-left: 1%;
+}
+.link:hover {
+  background-color: rgb(28, 90, 134);
+}
 .form {
   display: flex;
   flex-direction: column;
