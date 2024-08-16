@@ -1,0 +1,227 @@
+.fundo {
+  background-color: #d2dbf5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cabecalho {
+  background: #3a82f7;
+  padding: 1rem;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pageContato {
+  padding: 150px 4%;
+  text-align: center;
+}
+
+.tituloContato {
+  font-size: 2.5rem;
+  color: #3a82f7;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.infoContato {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.formularioContato {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formularioContato label {
+  text-align: left;
+  font-weight: bold;
+}
+
+.formularioContato input, 
+.formularioContato textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.formularioContato textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+.botaoEnviar {
+  padding: 0.7rem;
+  background-color: #3a82f7;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.botaoEnviar:hover {
+  background-color: #1e3c72;
+}
+
+.rodape {
+  background: linear-gradient(135deg, #3a82f7, #1e3c72);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.rodape::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  height: 20px;
+ 
+  border-radius: 50% 50% 0 0;
+}
+
+.logoDiv {
+  margin-bottom: 0.5rem;
+}
+
+.logo {
+  width: 8%;
+  transition: transform 0.3s ease;
+}
+.logoInicio{
+  width: 03%;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.redesSociais {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.redesSociais a {
+  margin: 0 10px;
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.redesSociais a:hover {
+  color: #ddd;
+}
+
+.criadores {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.criadores span {
+  font-weight: bold;
+}
+
+.direitosReservados {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  color: #ddd;
+}
+.infoContato {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.infoContato div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.logoInicio {
+  width: 5%;
+  margin-left: 1%;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  background-color: #4d9ffd;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  font-size: 1.1rem;
+  margin-right: 1.5rem;
+}
+.link:first-of-type {
+  margin-left: 0; 
+}
+
+.link:hover {
+  background-color: rgb(28, 90, 134);
+}
+
+.infoContato i {
+  margin-right: 0.5rem;
+  font-size: 1.8rem;
+  color: #3a82f7;
+}
+.email{
+  color: red;
+  padding-right: 1px;
+}
+.wat{
+  color: green;
+  padding-right: 1px;
+}
+.telefone{
+  color: blue;
+  padding-right: 1px;
+}
+.endereco{
+  color: rgb(19, 78, 189);
+  padding-right: 1px;
+}
+@media (max-width: 768px) {
+  .cabecalho {
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+  }
+
+  .link {
+      padding: 0.5rem;
+  }
+
+  .formularioContato input, 
+  .formularioContato textarea {
+      font-size: 0.9rem;
+  }
+
+  .botaoEnviar {
+      font-size: 1rem;
+  }
+}
