@@ -35,7 +35,7 @@ function Login() {
 
       if (result.sucesso) {
         console.log('Login efetuado com sucesso:', result);
-        navigate('/home'); // Substitua '/cadastro' pelo caminho desejado
+        window.location.href = 'http://localhost:5173/'; // Redireciona para um URL externo
       } else {
         setLoginError('Usuário não encontrado ou credenciais inválidas');
       }
